@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/carrito.css">
+    <title>Carrito de Compras</title>
+    <script src="js/carriton.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Tienda Los Estrellas</h1>
+    </header>
+    <section class="contenedor">
+        <br>
+        <a href="index.html">Index</a>
+        <a href="contactenos.html">Contactanos</a>
+        <a href="sobre.html">Sobre Nosotros</a>
+        <a href="productos.html">Productos</a>
+    </section>
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="product">
+                <td>
+                    <img class="product-image"
+                        src="https://savegame.pro/wp-content/uploads/2019/08/resident-evil-4-cover.jpg" alt="Producto">
+                    <span class="product-name">Resident Evil 4</span>
+                </td>
+                <td class="product-price">$20.000</td>
+                <td class="product-quantity">
+                    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+                </td>
+                <td class="product-line-price">$20.000</td>
+                <td class="product-removal">
+                    <button class="remove-product">Eliminar</button>
+                </td>
+            </tr>
+            <tr class="product">
+                <td>
+                    <img class="product-image"
+                        src="https://store-images.s-microsoft.com/image/apps.50528.68332208580498659.9222b095-8101-4531-b386-33547ee9944f.948f2c50-2f29-43df-9557-4670f69840d1?mode=scale&q=90&h=225&w=150&background=%23FFFFFF"
+                        alt="Producto">
+                    <span class="product-name">Call Of Duty Moder Warfare</span>
+                </td>
+                <td class="product-price">$50.000</td>
+                <td class="product-quantity">
+                    <input type="number" value="1" onchange="updateTotal(this)">
+                </td>
+                <td class="product-line-price">$50.000</td>
+                <td class="product-removal">
+                    <button class="remove-product">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total:</td>
+                <td id="cart-total">$70.000</td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
